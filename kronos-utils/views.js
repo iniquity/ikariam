@@ -1878,8 +1878,8 @@ function showUnitLevels(specs) {
   function augmentUnit(li) {
     var stats = unitStatsFromImage($X('div[@class="unitinfo"]//img', li));
     level("att", stats, li, " (", "");
-	serverVersionIsAtLeast("0.3.2") && level("sta", stats, li, ")(", "");
-    level("def", stats, li, "/", ")");
+    level("def", stats, li, "/", "");
+    level("sta", stats, li, ", ", "hp)");
     var cnt = integer($X('div[@class="unitinfo"]/div[@class="unitcount"]', li));
     config.setCity(["T", stats.id], cnt);
   }
