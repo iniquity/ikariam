@@ -2502,6 +2502,7 @@ function showCityBuildCompletions() {
   }
   for (var i = 0; i < lis.length; i++) {
     var id = ids[i];
+    if(!id>0) break; //To prevent listing deployed/occupied cities, which don't work anyway
     var url = config.getCity("u", 0, ids[i]);
     var res = config.getIsle("r", "", config.getCity("i", 0, id));
     var li = lis[i];
